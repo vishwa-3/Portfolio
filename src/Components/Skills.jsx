@@ -29,17 +29,17 @@ function Skills() {
                 </ul>
                 <ul>
                     <h1>Backend</h1>
-                    <li>My SQL
+                    <li>MongoDB
                         <Rating value={3.5} precision={0.5} readOnly />
                     </li>
-                    <li>MongoDB
+                    <li>My SQL
                         <Rating value={2.5} precision={0.5} readOnly />
                     </li>
                     <li>Node Js
-                        <Rating value={2} readOnly />
+                        <Rating value={2.5} precision={0.5} readOnly />
                     </li>
                     <li>Express Js
-                        <Rating value={2} readOnly />
+                        <Rating value={2.5} precision={0.5} readOnly />
                     </li>
                 </ul>
                 <ul>

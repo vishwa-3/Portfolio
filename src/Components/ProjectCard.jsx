@@ -7,7 +7,8 @@ function ProjectCard({ img, heading, para, tags, date, link }) {
         <div className='card'>
             <img src={img} alt="p1" />
             <div className='txt-container'>
-                <h1><a href={link} target='blank'>{heading} <LinkIcon /></a>
+                <h1>
+                    <a href={link} target='blank'>{heading} <LinkIcon /></a>
                 </h1>
                 <div className='tags'>
                     {
