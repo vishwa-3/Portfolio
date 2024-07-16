@@ -15,22 +15,22 @@ function Skills() {
                         <Rating value={4.5} precision={0.5} readOnly />
                     </li>
                     <li>Javascript
-                        <Rating value={4} readOnly />
+                        <Rating value={4.5} precision={0.5} readOnly />
                     </li>
                     <li>React Js
-                        <Rating value={3.5} precision={0.5} readOnly />
+                        <Rating value={4} readOnly />
                     </li>
                     <li>Bootstrap
-                        <Rating value={3.5} precision={0.5} readOnly />
-                    </li>
-                    <li>Tailwind
                         <Rating value={3.5} precision={0.5} readOnly />
                     </li>
                 </ul>
                 <ul>
                     <h1>Backend</h1>
+                    <li>C++
+                        <Rating value={4} readOnly />
+                    </li>
                     <li>MongoDB
-                        <Rating value={3.5} precision={0.5} readOnly />
+                        <Rating value={2.5} precision={0.5} readOnly />
                     </li>
                     <li>My SQL
                         <Rating value={2.5} precision={0.5} readOnly />
@@ -61,13 +61,7 @@ function Skills() {
                     </li>
                     <li>C#
                         <Rating value={3.5} precision={0.5} readOnly />
-                    </li>
-                    <li>Unreal
-                        <Rating value={2} readOnly />
-                    </li>
-                    <li>C++
-                        <Rating value={2} readOnly />
-                    </li>
+                    </li>                    
                 </ul>
             </div>
         </div>
