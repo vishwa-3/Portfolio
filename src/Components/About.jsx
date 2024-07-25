@@ -1,6 +1,6 @@
 import React from 'react'
 import profile from '../assets/profile.jpg'
-import Resume from '../assets/ResumeWebDev.pdf'
+import Resume from '../assets/Resume.pdf'
 
 function About() {
     return (

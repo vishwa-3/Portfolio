@@ -16,7 +16,7 @@ function Projects() {
             img: p1,
             heading: 'Flashy Cabs',
             para: 'I developed a comprehensive full-stack MERN web application as part of a college project, seamlessly integrating Leaflet for interactive maps and Clerk for robust authentication. The application features a smooth booking flow, incorporating dynamic car availability checks, and automated email notifications, ensuring a streamlined user experience.',
-            tags: 'React Js, Scss, MERN, Clerk, Leaflet, express.js, mongoose',
+            tags: 'MERN, Scss, Clerk, Leaflet',
             date: 'Mar 2024',
             link: 'https://github.com/vishwa-3/FlashyCabs'
         },

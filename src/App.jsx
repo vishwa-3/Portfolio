@@ -4,12 +4,12 @@ import About from "./Components/About"
 import Projects from "./Components/Projects"
 import Skills from "./Components/Skills"
 import Contact from "./Components/Contact"
-import ToggleButtonCode from "./Components/ToggleButtonCode"
+// import ToggleButtonCode from "./Components/ToggleButtonCode"
 
 function App() {
   return (
     <div>
-      <ToggleButtonCode/>
+      {/* <ToggleButtonCode/> */}
       <Header/>
       <Hero/>
       <About/>

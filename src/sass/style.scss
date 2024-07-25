@@ -17,160 +17,159 @@ body {
     background-color: #121212;
 }
 
-@mixin xl {
-    @media screen and (max-width : 1200px) {
-        @content
-    }
-}
 
-;
-
-@mixin lg {
+@mixin laptop {
     @media screen and (max-width : 992px) {
-        @content
+        @content;
     }
 }
 
-;
-
-@mixin md {
+@mixin tablet {
     @media screen and (max-width : 768px) {
-        @content
+        @content;
     }
 }
 
-;
-
-@mixin sm {
-    @media screen and (max-width : 576px) {
-        @content
+@mixin tablet-mini {
+    @media screen and (max-width : 650px) {
+        @content;
     }
 }
 
-.light-mode {
-    background-color: #ffffff;
-
-    .toggle-button {
-        button {
-            color: #121212;
-        }
-    }
-
-    .nav {
-        ul {
-            li {
-                color: #121212;
-            }
-        }
-    }
-
-    .hero {
-        .txt {
-            color: #121212;
-        }
-    }
-
-    .about {
-        .para {
-            color: #121212;
-        }
-
-        a {
-            button {
-                color: #121212;
-            }
-        }
-    }
-
-    .project {
-        .arrow-button {
-            button {
-                color: #1e1e1e;
-            }
-        }
-
-        .card {
-            .date {
-                color: #1e1e1e;
-            }
-
-            .txt-container {
-                background-color: #eeeeee;
-
-                h1 {
-                    color: #1e1e1e;
-                }
-
-                .para {
-                    color: #1e1e1e;
-                }
-
-                .tags {
-                    span {
-                        color: #1e1e1e;
-                    }
-                }
-            }
-        }
-    }
-
-    .skill {
-        background-color: #eeeeee;
-        color: #1e1e1e;
-
-        .set {
-            ul {
-                background-color: #d3d3d3;
-            }
-        }
-    }
-
-    .contact {
-        ul {
-            
-            li {
-                a {
-                    color: #121212;
-                }
-            }
-        }
+@mixin moblie {
+    @media screen and (max-width : 480px) {
+        @content;
     }
 }
 
-.toggle-button {
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    z-index: 1001;
+// .light-mode {
+//     background-color: #ffffff;
 
-    button {
-        color: white;
-        border: none;
-        background-color: transparent;
-        transition: .3s;
+//     .toggle-button {
+//         button {
+//             color: #121212;
+//         }
+//     }
 
-        &:hover {
-            transform: scale(1.2);
-        }
-    }
-}
+//     .nav {
+//         ul {
+//             li {
+//                 color: #121212;
+//             }
+//         }
+//     }
+
+//     .hero {
+//         .txt {
+//             color: #121212;
+//         }
+//     }
+
+//     .about {
+//         .para {
+//             color: #121212;
+//         }
+
+//         a {
+//             button {
+//                 color: #121212;
+//             }
+//         }
+//     }
+
+//     .project {
+//         .arrow-button {
+//             button {
+//                 color: #1e1e1e;
+//             }
+//         }
+
+//         .card {
+//             .date {
+//                 color: #1e1e1e;
+//             }
+
+//             .txt-container {
+//                 background-color: #eeeeee;
+
+//                 h1 {
+//                     color: #1e1e1e;
+//                 }
+
+//                 .para {
+//                     color: #1e1e1e;
+//                 }
+
+//                 .tags {
+//                     span {
+//                         color: #1e1e1e;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .skill {
+//         background-color: #eeeeee;
+//         color: #1e1e1e;
+
+//         .set {
+//             ul {
+//                 background-color: #d3d3d3;
+//             }
+//         }
+//     }
+
+//     .contact {
+//         ul {
+
+//             li {
+//                 a {
+//                     color: #121212;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// .toggle-button {
+//     position: fixed;
+//     top: 30px;
+//     right: 30px;
+//     z-index: 1001;
+
+//     button {
+//         color: white;
+//         border: none;
+//         background-color: transparent;
+//         transition: .3s;
+
+//         &:hover {
+//             transform: scale(1.2);
+//         }
+//     }
+// }
 
 .heading {
     color: #a555ec;
-    font-size: 6rem;
-    font-weight: 700;
+    font-size: 5rem;
+    font-weight: 800;
     text-shadow: -3px 3px 3px #121212c8;
 
-    @include lg {
+    @include laptop {
         font-size: 4.5rem;
     }
 
-    @include md {
+    @include tablet {
         font-size: 3.5rem;
     }
 
-    @include sm {
+    @include tablet-mini {
         font-size: 3rem;
+    }
+
+    @include moblie {
+        font-size: 2.5rem;
     }
 }
 
@@ -178,19 +177,16 @@ body {
     margin-top: .5rem;
     position: fixed;
     z-index: 1000;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     width: 100%;
-    
+
+
 
     ul {
-        @include md {
-            padding: .2rem .7rem;
-        }
-
         border-radius: 20px;
         backdrop-filter: blur(3px);
         background: #121212af;
@@ -200,6 +196,13 @@ body {
         justify-content: center;
         gap: 30px;
         box-shadow: -3px 3px 10px #121212;
+
+        @include moblie{
+            padding: .3rem .6rem;
+            gap: 15px;
+        }
+
+
 
         li {
             position: relative;
@@ -255,15 +258,24 @@ body {
     align-items: center;
     margin-bottom: 2rem;
 
+
     img {
         width: 450px;
 
-        @include md {
+        @include laptop {
+            width: 400px;
+        }
+
+        @include tablet {
             width: 350px;
         }
 
-        @include sm {
-            width: 300px;
+        @include tablet-mini {
+            width: 275px;
+        }
+
+        @include moblie {
+            width: 230px;
         }
     }
 
@@ -274,26 +286,10 @@ body {
         transform: translate(-50%, -50%);
 
         color: white;
-        font-size: 16.5rem;
+        font-size: 18vw;
         font-weight: 900;
 
         z-index: -1;
-
-        @include xl {
-            font-size: 14rem;
-        }
-
-        @include lg {
-            font-size: 10.8rem;
-        }
-
-        @include md {
-            font-size: 8rem;
-        }
-
-        @include sm {
-            font-size: 6rem;
-        }
     }
 }
 
@@ -311,35 +307,41 @@ body {
     gap: 20px;
 
 
+    @include tablet-mini {
+        flex-direction: column;
+    }
+
+    @include laptop {
+        font-size: 14px;
+    }
+
+    @include tablet {
+        font-size: 13px;
+    }
+
     img {
         width: 350px;
         border-radius: 50%;
-        box-shadow: -20px 0px 0px #a555ec;
+        box-shadow: -20px 0px 0px #1e1e1e;
 
-        @include lg {
-            width: 300px;
+        @include laptop {
+            width: 280px;
         }
 
-        @include md {
-            width: 200px;
+        @include tablet {
+            width: 220px;
         }
 
-        @include sm {
-            width: 150px;
+        @include tablet-mini {
+            border-radius: 0;
+            width: 180px;
         }
+
     }
 
     .para {
         position: relative;
         color: white;
-
-        @include lg {
-            font-size: .9rem;
-        }
-
-        @include md {
-            font-size: .7rem;
-        }
 
     }
 
@@ -348,32 +350,42 @@ body {
         left: 27%;
         top: 0;
 
-        @include sm {
-            top: -15px;
+        @include tablet-mini {
+            left: 10%;
         }
     }
 
     a {
         position: absolute;
         right: 10%;
-        bottom: -60px;
+        bottom: -40px;
 
         button {
             padding: 5px 10px;
             border: none;
             background-color: #a555ec;
-            border-radius: 8px 0px 8px 8px;
+            border-radius: 0px 8px 8px 8px;
             font-size: 1rem;
             color: white;
             border: 3px solid transparent;
             transition: .3s;
 
-            @include sm {
-                font-size: .7rem;
+            @include laptop {
+                font-size: .9rem;
             }
 
+            @include tablet {
+                font-size: .8rem;
+            }
+
+            @include moblie {
+                font-size: .7rem;
+                padding: 3px 7px;
+            }
+
+
             &:hover {
-                background-color: transparent;
+                background-color: #a555ec7a;
                 border: 3px solid #a555ec;
             }
         }
@@ -384,7 +396,6 @@ body {
     position: relative;
 
     margin-inline: auto;
-    max-width: 1200px;
     padding: 2rem;
     margin-bottom: 5rem;
 
@@ -399,13 +410,26 @@ body {
         display: flex;
         position: absolute;
         gap: 10px;
-        top: 65%;
-        left: 79%;
+        top: 70%;
+        left: 80%;
+
+
+        @include tablet {
+            top: 60%;
+        }
+
+        @include tablet-mini {
+            position: relative;
+            left: 5%;
+            top: -10px;
+        }
+
+        
 
         button {
             background: transparent;
             border: none;
-            color: white;
+            color: #a555ec;
             transition: .3s;
 
             &:hover {
@@ -420,14 +444,21 @@ body {
             .next {
                 font-size: 3rem;
 
-                @include lg {
+                @include laptop {
                     font-size: 2.5rem;
                 }
 
-                @include md {
+                @include tablet {
                     font-size: 2rem;
                 }
 
+                @include tablet-mini {
+                    font-size: 1.8rem;
+                }
+
+                @include moblie {
+                    font-size: 1.5rem;
+                }
             }
         }
     }
@@ -440,16 +471,12 @@ body {
         position: relative;
 
         img {
-            width: 800px;
+            width: 80vw;
             border-radius: 10px 10px 0px 0px;
             box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3);
 
-            @include lg {
-                width: 600px;
-            }
-
-            @include md {
-                width: 500px;
+            @include tablet-mini {
+                width: 90vw;
             }
         }
 
@@ -457,16 +484,11 @@ body {
             background-color: #1e1e1e;
             border-radius: 0px 0px 10px 10px;
             padding: 1rem;
-            width: 800px;
+            width: 80vw;
             box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.3);
 
-
-            @include lg {
-                width: 600px;
-            }
-
-            @include md {
-                width: 500px;
+            @include tablet-mini {
+                width: 90vw;
             }
 
             h1 {
@@ -489,27 +511,51 @@ body {
                     color: inherit;
                 }
 
+                @include moblie {
+                    margin-bottom: 3px;
+                    font-size: 1.5rem;
+                }
+
             }
 
             .para {
                 color: white;
 
-                @include lg {
-                    font-size: .9rem;
+
+                @include laptop {
+                    font-size: 14px;
                 }
 
-                @include md {
-                    font-size: .7rem;
+                @include tablet-mini {
+                    font-size: 12px;
                 }
+
+
             }
 
             .tags {
                 display: flex;
                 align-items: center;
                 justify-content: start;
+                flex-wrap: wrap;
                 gap: 10px;
-                font-size: .8rem;
+                font-size: 14px;
                 margin-bottom: 1rem;
+
+                @include laptop {
+                    font-size: 12px;
+                }
+
+                @include tablet-mini {
+                    font-size: 10px;
+                }
+
+
+                @include moblie {
+                    font-size: 8px;
+                    margin-bottom: 3px;
+                    gap: 3px;
+                }
 
                 span {
                     padding: 2px 5px;
@@ -526,13 +572,17 @@ body {
             font-size: 1rem;
             right: 12%;
             bottom: -10px;
+
+            @include tablet-mini {
+                font-size: .7rem;
+            }
         }
     }
 }
 
 .skill {
     color: white;
-    max-width: 1200px;
+    max-width: 85vw;
     margin-inline: auto;
     background-color: #1a1a1a;
     border-radius: 20px;
@@ -540,16 +590,9 @@ body {
     position: relative;
     margin-bottom: 5rem;
 
-    @include xl {
-        max-width: 992px;
-    }
-
-    @include lg {
-        max-width: 768px;
-    }
-
-    @include sm {
-        max-width: 400px;
+    @include tablet {
+        max-width: 90vw;
+        padding: 30px;
     }
 
     .heading {
@@ -558,12 +601,16 @@ body {
         top: -60px;
         transform: translateX(-50%);
 
-        @include md {
-            top: -40px;
+        @include laptop {
+            top: -45px;
         }
 
-        @include sm {
-            top: -30px;
+        @include tablet-mini {
+            top: -35px;
+        }
+
+        @include moblie {
+            top: -25px;
         }
 
     }
@@ -575,13 +622,12 @@ body {
         justify-content: center;
         gap: 40px;
 
-        @include lg {
-            gap: 30px;
+        
+        @include tablet-mini {
+            gap: 10px;
         }
 
-        @include md {
-            gap: 20px;
-        }
+
 
         ul {
             margin-top: 2rem;
@@ -591,6 +637,23 @@ body {
             border-radius: 10px;
             box-shadow: -7px 5px 10px #121212b4;
 
+
+            @include tablet {
+                width: 200px;
+            }
+
+            
+            @include tablet-mini {
+                padding: 10px;
+                margin-top: 1rem;
+                width: 180px;
+            }
+
+            @include moblie {
+                width: 135px;
+                padding: 5px;
+                margin-top: 14px;
+            }
 
             position: relative;
             transition: .3s;
@@ -603,8 +666,17 @@ body {
                 position: absolute;
                 top: -20px;
                 right: 20px;
-                // text-shadow: -7px 5px 5px #121212da;
                 font-weight: 200;
+
+
+                @include tablet {
+                    font-size: 1.8rem;
+                }
+
+                @include moblie {
+                    font-size: 1.3rem;
+                }
+
             }
 
             li {
@@ -613,8 +685,27 @@ body {
                 justify-content: space-between;
                 padding: 3px;
 
+                @include tablet {
+                    font-size: 16px;
+                }
+
+                @include moblie {
+                    font-size: 12px;
+                }
+
+                .MuiRating-root {
+                    @include tablet {
+                        font-size: 16px;
+                    }
+
+                    @include moblie {
+                        font-size: 12px;
+                    }
+                }
+
                 .MuiRating-iconEmpty {
                     color: #3e3e3e;
+
                 }
 
             }
@@ -627,16 +718,17 @@ body {
 
     margin-bottom: 2rem;
 
-
-
-
-
     ul {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 50px;
+
+        @include moblie {
+            gap: 30px;
+        }
+
 
         &::before {
             content: '';
@@ -660,6 +752,22 @@ body {
                 text-decoration: none;
                 color: white;
                 transition: .5s;
+
+                .MuiSvgIcon-root {
+                    font-size: 3rem;
+
+                    @include tablet {
+                        font-size: 2.8rem;
+                    }
+
+                    @include tablet-mini {
+                        font-size: 2.2rem;
+                    }
+
+                    @include moblie {
+                        font-size: 1.8rem;
+                    }
+                }
 
                 &:hover {
                     color: #a555ec;
