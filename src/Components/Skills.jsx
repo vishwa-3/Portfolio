@@ -1,9 +1,17 @@
 import React from 'react'
 import Rating from '@mui/material/Rating';
 
+import { motion } from "framer-motion"
+
 function Skills() {
     return (
-        <div className='skill' id="skill">
+        <motion.div
+            className='skill' id="skill"
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.6, -0.05, 0.01, 0.99] }}
+            viewport={{ once: true }}
+        >
             <h1 className='heading'>Skills</h1>
             <div className='set'>
                 <ul>
@@ -61,10 +69,10 @@ function Skills() {
                     </li>
                     <li>C#
                         <Rating value={3.5} precision={0.5} readOnly />
-                    </li>                    
+                    </li>
                 </ul>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

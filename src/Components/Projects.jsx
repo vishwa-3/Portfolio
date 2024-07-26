@@ -9,6 +9,8 @@ import p4 from '../assets/p4.png';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
+import { motion } from "framer-motion"
+
 function Projects() {
     const [currentProject, setCurrentProject] = useState(0);
     const projects = [
@@ -58,7 +60,13 @@ function Projects() {
     };
 
     return (
-        <div className='project' id='project'>
+        <motion.div
+            className='project' id='project'
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.6, -0.05, 0.01, 0.99] }}
+            viewport={{ once: true }}
+        >
             <h1 className='heading'>Project</h1>
             <div className='card-container'>
                 <ProjectCard
@@ -74,7 +82,7 @@ function Projects() {
                     <button onClick={handleNext}><ArrowCircleRightIcon className='next' /></button>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
