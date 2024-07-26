@@ -197,7 +197,7 @@ body {
         gap: 30px;
         box-shadow: -3px 3px 10px #121212;
 
-        @include moblie{
+        @include moblie {
             padding: .3rem .6rem;
             gap: 15px;
         }
@@ -424,12 +424,12 @@ body {
             top: -10px;
         }
 
-        
+
 
         button {
             background: transparent;
             border: none;
-            color: #a555ec;
+            color: white;
             transition: .3s;
 
             &:hover {
@@ -446,6 +446,8 @@ body {
 
                 @include laptop {
                     font-size: 2.5rem;
+                    color: #a555ec;
+
                 }
 
                 @include tablet {
@@ -454,6 +456,7 @@ body {
 
                 @include tablet-mini {
                     font-size: 1.8rem;
+
                 }
 
                 @include moblie {
@@ -622,7 +625,7 @@ body {
         justify-content: center;
         gap: 40px;
 
-        
+
         @include tablet-mini {
             gap: 10px;
         }
@@ -642,7 +645,7 @@ body {
                 width: 200px;
             }
 
-            
+
             @include tablet-mini {
                 padding: 10px;
                 margin-top: 1rem;
