@@ -429,7 +429,7 @@ body {
         button {
             background: transparent;
             border: none;
-            color: white;
+            color: #a555ec;
             transition: .3s;
 
             &:hover {
@@ -446,7 +446,6 @@ body {
 
                 @include laptop {
                     font-size: 2.5rem;
-                    color: #a555ec;
 
                 }
 
